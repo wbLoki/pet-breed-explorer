@@ -30,7 +30,7 @@ function Card ({breed}: Props) {
     return (
     <Link
     href={`/${breed?.id}`}
-    className='flex flex-col justify-around gap-4 p-4 bg-slate-500 rounded-lg'>
+    className='flex flex-col justify-around gap-4 p-4 bg-slate-500 dark:bg-slate-100 rounded-lg'>
         <div>
             <Image className='object-cover rounded-xl h-full' src={data[0]?.url} width={data[0]?.width} height={data[0]?.height} alt={breed.name} />
         </div>

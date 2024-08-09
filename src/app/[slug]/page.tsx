@@ -10,7 +10,7 @@ async function Breed({ params }: { params: { slug: string } }) {
     <div className='flex min-h-screen flex-col items-center gap-4 p-24'>
         <h1 className='text-2xl md:text-3xl'>{breed?.name}</h1>
         <Image className='object-cover rounded-xl w-[30dvh]' src={breedImage[0]?.url} width={breedImage[0]?.width} height={breedImage[0]?.height} alt={breed.name} />
-        <div className='capitalize flex flex-col rounded-md bg-gray-900 p-4 max-w-3xl text-xs md:text-lg gap-2'>
+        <div className='capitalize flex flex-col rounded-md bg-yellow-50 dark:bg-gray-900 p-4 max-w-3xl text-xs md:text-lg gap-2'>
           <span>Weight: {breed?.weight?.metric}</span>
           <span>temperament: {breed?.temperament}</span>
           <span>origin: {breed?.origin}</span>
