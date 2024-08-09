@@ -14,6 +14,13 @@ const useGetBreeds = async (): Promise<Breed[]> => {
     return [...catBreeds, ...dogBreeds];
 };
 
+export const useGetBreed = async (id: string | number): Promise<Breed> => {
+    const url = typeof id === 'string' 
+        ? `${process.env.CAT_API_URL}/breeds/${id}` 
+        : `${process.env.DOG_API_URL}/breeds/${id}`
+    return await fetchData(url);
+};
+
 export const useGetBreedImage = async (id: string | number, num: number): Promise<BreedImage[]> => {
     const url = typeof id === 'string' 
         ? `${process.env.CAT_API_URL}/images/search?breed_ids=${id}&limit=${num}` 

@@ -8,7 +8,7 @@ type Props = {
 function List({breeds}: Props) {
   return (
     <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4'>
-      {breeds.map((breed, key) => {
+      {breeds.length > 0 && breeds.map((breed, key) => {
         return <Card key={key} breed={{
           id: breed.id,
           name: breed.name,
